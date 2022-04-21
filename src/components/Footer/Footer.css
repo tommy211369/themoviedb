@@ -1,0 +1,42 @@
+.Footer {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Footer p {
+  background: -webkit-linear-gradient(
+    #88cca4,
+    #6ac6b4,
+    #54c1bf,
+    #52c1c0,
+    #38bec9,
+    #24b7da
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Footer a {
+  padding: 8px;
+  text-decoration: none;
+  color: #2ebbd1;
+  margin: 0;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+.Footer a:hover {
+  background: linear-gradient(
+    to right,
+    #88cca4,
+    #6ac6b4,
+    #54c1bf,
+    #52c1c0,
+    #38bec9,
+    #24b7da
+  );
+  color: white;
+}

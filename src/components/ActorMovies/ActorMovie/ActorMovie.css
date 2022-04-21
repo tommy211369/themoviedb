@@ -1,0 +1,29 @@
+.ActorMovie {
+  width: 20%;
+  margin-top: 50px;
+  transition: transform 0.2s ease;
+}
+
+.ActorMovie:hover {
+  transform: scale(1.1);
+}
+
+.ActorMovie:hover img {
+  box-shadow: 0 0 20px black;
+}
+
+.ActorMovie a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.ActorMovie h4 {
+  font-size: 0.7em;
+  margin-top: 5px;
+}
+
+.ActorMovie img {
+  object-fit: cover;
+  width: 70%;
+  border-radius: 10px;
+}

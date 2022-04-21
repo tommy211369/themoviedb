@@ -1,0 +1,38 @@
+.ActorDetails {
+  display: flex;
+  padding: 30px;
+}
+
+.ActorDetails img {
+  width: 350px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px black;
+}
+
+.ActorDetails .infos {
+  text-align: left;
+  margin-left: 50px;
+  padding: 20px;
+  flex: 1;
+  box-sizing: border-box;
+  /* background-color: aqua; */
+}
+
+.ActorDetails .infos h1 {
+  text-align: center;
+  font-size: 1.3em;
+  margin-bottom: 30px;
+}
+
+.ActorDetails .infos p {
+  font-size: 0.7em;
+  margin-top: 15px;
+}
+
+.ActorDetails .infos .biography {
+  font-size: 0.6em;
+  line-height: 1.5em;
+  margin-top: 30px;
+}

@@ -1,0 +1,37 @@
+.SimilarMovies {
+  margin-top: 80px;
+  width: 100%;
+}
+
+.SimilarMovies h1 {
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.SimilarMovies > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.SimilarMovies button {
+  display: block;
+  margin-top: 30px;
+  text-align: left;
+  border-radius: 6px;
+  border: none;
+  padding: 8px;
+  transition: background-color 0.4s ease;
+}
+
+.SimilarMovies button:hover {
+  cursor: pointer;
+  background: linear-gradient(
+    to right,
+    #88cca4,
+    #6ac6b4,
+    #54c1bf,
+    #52c1c0,
+    #38bec9,
+    #24b7da
+  );
+}
