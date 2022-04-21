@@ -1,5 +1,14 @@
 .SimilarMovie {
   width: 20%;
+  transition: transform 0.2s ease;
+}
+
+.SimilarMovie:hover {
+  transform: scale(1.1);
+}
+
+.SimilarMovie:hover img {
+  box-shadow: 0 0 20px black;
 }
 
 .SimilarMovie a {
