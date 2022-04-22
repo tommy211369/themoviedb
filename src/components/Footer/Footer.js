@@ -3,7 +3,9 @@ import "./Footer.css";
 function Footer() {
   return (
     <div className="Footer">
-      <p>Made with React by Tommy Thongrasamy</p>
+      <a href="https://github.com/tommy211369" target="blank">
+        Made with React by <span>Tommy Thongrasamy</span>
+      </a>
       <a
         href="https://developers.themoviedb.org/3/getting-started/introduction"
         target="blank"

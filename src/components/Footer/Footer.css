@@ -25,7 +25,6 @@
   color: #2ebbd1;
   margin: 0;
   border-radius: 10px;
-  transition: background 0.2s ease;
 }
 
 .Footer a:hover {
@@ -38,5 +37,9 @@
     #38bec9,
     #24b7da
   );
+  color: white;
+}
+
+.Footer a span:hover {
   color: white;
 }
