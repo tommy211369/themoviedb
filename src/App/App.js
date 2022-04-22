@@ -46,8 +46,9 @@ function App() {
 
   // VARIABLES
 
-  const configUrl = data.baseUrl + "configuration?api_key=" + data.apiKey;
-  let moviesUrl = `search/movie?api_key=${data.apiKey}&query=${inputSearch}&language=fr-FR`;
+  const configUrl =
+    data.baseUrl + "configuration?api_key=" + process.env.REACT_APP_API_KEY;
+  let moviesUrl = `search/movie?api_key=${process.env.REACT_APP_API_KEY}&query=${inputSearch}&language=fr-FR`;
 
   return (
     <div className="App">

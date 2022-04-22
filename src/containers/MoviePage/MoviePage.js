@@ -35,7 +35,8 @@ const MoviePage = ({ handleSubmit, handleSearch, inputSearch }) => {
   const fetchMovie = async () => {
     try {
       const response = await axios.get(
-        data.baseUrl + `movie/${id}?api_key=${data.apiKey}&language=fr-FR`
+        data.baseUrl +
+          `movie/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=fr-FR`
       );
       setMovie(response.data);
     } catch (error) {
@@ -47,7 +48,7 @@ const MoviePage = ({ handleSubmit, handleSearch, inputSearch }) => {
     try {
       const response = await axios.get(
         data.baseUrl +
-          `movie/${id}/credits?api_key=${data.apiKey}&language=fr-FR`
+          `movie/${id}/credits?api_key=${process.env.REACT_APP_API_KEY}&language=fr-FR`
       );
       setCast(response.data.cast);
       setCrew(response.data.crew);
@@ -60,7 +61,7 @@ const MoviePage = ({ handleSubmit, handleSearch, inputSearch }) => {
     try {
       const response = await axios.get(
         data.baseUrl +
-          `movie/${id}/recommendations?api_key=${data.apiKey}&language=fr-FR`
+          `movie/${id}/recommendations?api_key=${process.env.REACT_APP_API_KEY}&language=fr-FR`
       );
       setSimilarMovies(response.data.results);
     } catch (error) {

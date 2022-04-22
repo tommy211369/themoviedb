@@ -28,7 +28,8 @@ function ActorPage({ handleSubmit, handleSearch, inputSearch }) {
   const fetchActor = async () => {
     try {
       const response = await axios.get(
-        data.baseUrl + `person/${id}?api_key=${data.apiKey}&language=fr-FR`
+        data.baseUrl +
+          `person/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=fr-FR`
       );
       setActor(response.data);
     } catch (error) {
@@ -40,7 +41,7 @@ function ActorPage({ handleSubmit, handleSearch, inputSearch }) {
     try {
       const response = await axios.get(
         data.baseUrl +
-          `person/${id}/movie_credits?api_key=${data.apiKey}&language=fr-FR`
+          `person/${id}/movie_credits?api_key=${process.env.REACT_APP_API_KEY}&language=fr-FR`
       );
       setMovies(response.data.cast);
     } catch (error) {
