@@ -10,6 +10,7 @@ import mvdbImage from "../../assets/img/mvdb.jpeg";
 import Input from "../../components/Input/Input";
 import MovieDetails from "../../components/MovieDetails/MovieDetails";
 import Sypnosis from "../../components/Sypnosis/Sypnosis";
+import MovieVideos from "../../components/MovieVideos/MovieVideos";
 import Casting from "../../components/Casting/Casting";
 import SimilarMovies from "../../components/SimilarMovies/SimilarMovies";
 
@@ -23,6 +24,7 @@ const MoviePage = ({ handleSubmit, handleSearch, inputSearch }) => {
   const [similarMovies, setSimilarMovies] = useState([]);
   const [allSimilarMovies, setAllSimilarMovies] = useState(false);
   const [allCast, setAllCast] = useState(false);
+  const [allVideos, setAllVideos] = useState(false);
 
   // USEEFFECT
   useEffect(() => {
@@ -36,7 +38,7 @@ const MoviePage = ({ handleSubmit, handleSearch, inputSearch }) => {
     try {
       const response = await axios.get(
         data.baseUrl +
-          `movie/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=fr-FR`
+          `movie/${id}?api_key=${process.env.REACT_APP_API_KEY}&append_to_response=videos,images&language=fr-FR`
       );
       setMovie(response.data);
     } catch (error) {
@@ -93,14 +95,29 @@ const MoviePage = ({ handleSubmit, handleSearch, inputSearch }) => {
             cast={cast}
           />
           <Sypnosis movie={movie} />
+
+          {movie.videos ? (
+            movie.videos.results ? (
+              movie.videos.results.length !== 0 ? (
+                <MovieVideos
+                  movie={movie}
+                  allVideos={allVideos}
+                  setAllVideos={setAllVideos}
+                />
+              ) : null
+            ) : null
+          ) : null}
+
           {cast ? (
             <Casting
               cast={cast}
               allCast={allCast}
               setAllCast={setAllCast}
               setAllSimilarMovies={setAllSimilarMovies}
+              setAllVideos={setAllVideos}
             />
           ) : null}
+
           {similarMovies ? (
             <SimilarMovies
               similarMovies={similarMovies}
@@ -108,6 +125,7 @@ const MoviePage = ({ handleSubmit, handleSearch, inputSearch }) => {
               setAllCast={setAllCast}
               allSimilarMovies={allSimilarMovies}
               setAllSimilarMovies={setAllSimilarMovies}
+              setAllVideos={setAllVideos}
             />
           ) : null}
         </div>
