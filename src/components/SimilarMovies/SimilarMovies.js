@@ -8,10 +8,12 @@ function Similarmovies({
   allSimilarMovies,
   setAllSimilarMovies,
   setAllCast,
+  setAllVideos,
 }) {
   // VARIABLES
   let shortSimilarMoviesArray = similarMovies.slice(0, 5);
   let similarMoviesArray = similarMovies.slice(0, 15);
+  console.log(similarMovies);
 
   return (
     <div className="SimilarMovies">
@@ -28,6 +30,7 @@ function Similarmovies({
                       movie={movie}
                       setAllSimilarMovies={setAllSimilarMovies}
                       setAllCast={setAllCast}
+                      setAllVideos={setAllVideos}
                     />
                   );
                 })
@@ -38,19 +41,20 @@ function Similarmovies({
                       movie={movie}
                       setAllSimilarMovies={setAllSimilarMovies}
                       setAllCast={setAllCast}
+                      setAllVideos={setAllVideos}
                     />
                   );
                 })}
           </div>
-          {!allSimilarMovies ? (
+          {!allSimilarMovies && similarMovies.length > 5 ? (
             <button onClick={() => setAllSimilarMovies(!allSimilarMovies)}>
               voir plus de films{" "}
             </button>
-          ) : (
+          ) : !allSimilarMovies && similarMovies.length <= 5 ? null : (
             <button onClick={() => setAllSimilarMovies(!allSimilarMovies)}>
               voir moins de films
             </button>
-          )}{" "}
+          )}
         </Fragment>
       ) : null}
     </div>

@@ -33,11 +33,11 @@ function ActorMovies({ actor, movies, allActorMovies, setAllActorMovies }) {
                   );
                 })}
           </div>
-          {!allActorMovies ? (
+          {!allActorMovies && movies.length > 5 ? (
             <button onClick={() => setAllActorMovies(!allActorMovies)}>
               voir plus de films de {actor.name}
             </button>
-          ) : (
+          ) : !allActorMovies && movies.length <= 5 ? null : (
             <button onClick={() => setAllActorMovies(!allActorMovies)}>
               voir moins de films {actor.name}
             </button>

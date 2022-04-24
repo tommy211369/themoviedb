@@ -1,5 +1,4 @@
 import "./MovieVideos.css";
-
 import YouTube from "react-youtube";
 
 function MovieVideos({ movie, allVideos, setAllVideos }) {
@@ -32,12 +31,13 @@ function MovieVideos({ movie, allVideos, setAllVideos }) {
 
   return (
     <div className="MovieVideos">
+      <h1>Videos</h1>
       <div>
         {!allVideos
           ? shortTrailersArray.map((video) => {
               return (
                 <div key={video.id} className="video">
-                  <YouTube videoId={video.id} opts={videoConfig} />
+                  <YouTube videoId={video.key} opts={videoConfig} />
                   <h4>
                     {video.name} - {video.type}
                   </h4>
@@ -60,7 +60,7 @@ function MovieVideos({ movie, allVideos, setAllVideos }) {
         <button onClick={() => setAllVideos(!allVideos)}>
           voir plus de videos
         </button>
-      ) : (
+      ) : !allVideos && movie.videos.results.length <= 3 ? null : (
         <button onClick={() => setAllVideos(!allVideos)}>
           voir moins de videos
         </button>

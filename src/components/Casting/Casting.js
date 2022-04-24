@@ -1,9 +1,14 @@
-import { useState } from "react";
 import "./Casting.css";
 
 import Cast from "./Cast/Cast";
 
-function Casting({ cast, allCast, setAllCast, setAllSimilarMovies }) {
+function Casting({
+  cast,
+  allCast,
+  setAllCast,
+  setAllSimilarMovies,
+  setAllVideos,
+}) {
   // VARIABLES
   let shortCastArray = cast.slice(0, 5);
   let castArray = cast.slice(0, 15);
@@ -20,6 +25,7 @@ function Casting({ cast, allCast, setAllCast, setAllSimilarMovies }) {
                   cast={cast}
                   setAllSimilarMovies={setAllSimilarMovies}
                   setAllCast={setAllCast}
+                  setAllVideos={setAllVideos}
                 />
               );
             })
@@ -30,14 +36,15 @@ function Casting({ cast, allCast, setAllCast, setAllSimilarMovies }) {
                   cast={cast}
                   setAllCast={setAllCast}
                   setAllSimilarMovies={setAllSimilarMovies}
+                  setAllVideos={setAllVideos}
                 />
               );
             })}
       </div>
 
-      {!allCast ? (
+      {!allCast && cast.length > 5 ? (
         <button onClick={() => setAllCast(!allCast)}> voir plus</button>
-      ) : (
+      ) : !allCast && cast.length <= 5 ? null : (
         <button onClick={() => setAllCast(!allCast)}> voir moins </button>
       )}
     </div>

@@ -121,10 +121,9 @@ const MoviePage = ({ handleSubmit, handleSearch, inputSearch }) => {
           {similarMovies ? (
             <SimilarMovies
               similarMovies={similarMovies}
-              movie={movie}
-              setAllCast={setAllCast}
               allSimilarMovies={allSimilarMovies}
               setAllSimilarMovies={setAllSimilarMovies}
+              setAllCast={setAllCast}
               setAllVideos={setAllVideos}
             />
           ) : null}

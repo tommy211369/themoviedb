@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import "./ActorPage.css";
 import data from "../../assets/data";
 import axios from "axios";
-import mvdbImage from "../../assets/img/mvdb.jpeg";
 
 // Components
 import Input from "../../components/Input/Input";

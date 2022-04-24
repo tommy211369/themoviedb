@@ -2,7 +2,7 @@ import "./Cast.css";
 import { Link } from "react-router-dom";
 import mvdbImage from "../../../assets/img/mvdb.jpeg";
 
-function Cast({ cast, setAllSimilarMovies, setAllCast }) {
+function Cast({ cast, setAllSimilarMovies, setAllCast, setAllVideos }) {
   let image = `https://image.tmdb.org/t/p/w300/${cast.profile_path}`;
   return (
     <div className="Cast">
@@ -11,6 +11,7 @@ function Cast({ cast, setAllSimilarMovies, setAllCast }) {
         onClick={() => {
           setAllSimilarMovies(false);
           setAllCast(false);
+          setAllVideos(false);
         }}
       >
         <img

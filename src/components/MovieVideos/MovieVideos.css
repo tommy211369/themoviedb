@@ -2,6 +2,11 @@
   margin-top: 30px;
 }
 
+.MovieVideos h1 {
+  font-size: 1.5em;
+  text-align: left;
+}
+
 .MovieVideos > div {
   display: flex;
   flex-wrap: wrap;
@@ -21,4 +26,23 @@
 
 .MovieVideos button {
   display: block;
+  margin-top: 30px;
+  text-align: left;
+  border-radius: 6px;
+  border: none;
+  padding: 8px;
+  transition: background-color 0.4s ease;
+}
+
+.MovieVideos button:hover {
+  cursor: pointer;
+  background: linear-gradient(
+    to right,
+    #88cca4,
+    #6ac6b4,
+    #54c1bf,
+    #52c1c0,
+    #38bec9,
+    #24b7da
+  );
 }
