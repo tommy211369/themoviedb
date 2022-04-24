@@ -10,6 +10,7 @@ import data from "../assets/data.js";
 import Home from "../containers/Home/Home";
 import MoviePage from "../containers/MoviePage/MoviePage";
 import ActorPage from "../containers/ActorPage/ActorPage";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/Footer/Footer";
 
@@ -90,6 +91,7 @@ function App() {
               />
             }
           />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
       <Footer />

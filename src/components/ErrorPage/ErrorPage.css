@@ -1,0 +1,42 @@
+.ErrorPage {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ErrorPage p {
+  color: #2ebbd1;
+  font-size: 1.2em;
+}
+
+.ErrorPage a {
+  text-decoration: none;
+}
+
+.ErrorPage button {
+  display: block;
+  margin-top: 30px;
+  text-align: left;
+  border-radius: 6px;
+  border: none;
+  padding: 12px;
+  transition: background-color 0.4s ease;
+  font-size: 1.2em;
+  color: #2ebbd1;
+  background-color: #4b4b4b;
+}
+
+.ErrorPage button:hover {
+  cursor: pointer;
+  background: linear-gradient(
+    to right,
+    #88cca4,
+    #6ac6b4,
+    #54c1bf,
+    #52c1c0,
+    #38bec9,
+    #24b7da
+  );
+  color: white;
+}
