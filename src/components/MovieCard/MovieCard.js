@@ -5,7 +5,7 @@ import { genreFinder } from "../../assets/functionsFile";
 
 const MovieCard = ({ movie }) => {
   // VARIABLES
-  let image = `https://image.tmdb.org/t/p/w154/${movie.poster_path}`;
+  let image = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
 
   const dateFormater = (date) => {
     let [yy, mm, dd] = date.split("-");

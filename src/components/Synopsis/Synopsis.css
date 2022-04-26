@@ -1,0 +1,16 @@
+.Synopsis {
+  font-size: 0.8em;
+  margin-top: 30px;
+  text-align: justify;
+  line-height: 1.2;
+  padding: 20px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px) {
+  .Synopsis {
+    font-size: 0.6em;
+    margin-top: 10px;
+  }
+}

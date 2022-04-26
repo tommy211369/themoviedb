@@ -33,3 +33,23 @@
   font-size: 0.6em;
   color: rgb(160, 160, 160);
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1060px) {
+  .Cast {
+    width: 33%;
+  }
+}
+
+@media (max-width: 800px) {
+  .Cast {
+    width: 45%;
+  }
+}
+
+@media (max-width: 545px) {
+  .Cast {
+    width: 80%;
+  }
+}

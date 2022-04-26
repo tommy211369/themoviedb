@@ -49,3 +49,34 @@
 .MovieDetails .infos > div p:nth-child(2) {
   margin-left: 50px;
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px) {
+  .MovieDetails {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .MovieDetails .infos {
+    margin-left: 0px;
+    padding: 20px 0;
+  }
+
+  .MovieDetails img {
+    width: 90%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 405px) {
+  .MovieDetails {
+    padding: 0px;
+  }
+
+  .MovieDetails .infos {
+    text-align: left;
+  }
+}

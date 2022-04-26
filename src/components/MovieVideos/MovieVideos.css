@@ -46,3 +46,28 @@
     #24b7da
   );
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1350px) {
+  .MovieVideos > div {
+    flex-direction: column;
+    /* align-items: center; */
+  }
+
+  .MovieVideos .video {
+    margin-top: 35px;
+    width: 100%;
+  }
+
+  .MovieVideos h4 {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .MovieVideos {
+    display: none;
+  }
+}

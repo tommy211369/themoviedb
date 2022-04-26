@@ -3,5 +3,13 @@
   outline: none;
   font-size: 0.8em;
   padding: 15px;
-  margin: 50px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 405px) {
+  .Input {
+    width: 70%;
+    margin: 0 auto 50px auto;
+  }
 }

@@ -43,3 +43,23 @@
 .Footer a span:hover {
   color: white;
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 805px) {
+  .Footer {
+    flex-direction: column;
+  }
+
+  .Footer a {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 415px) {
+  .Footer a {
+    width: 80%;
+    font-size: 80%;
+    text-align: center;
+  }
+}

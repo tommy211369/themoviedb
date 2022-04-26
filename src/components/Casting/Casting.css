@@ -34,3 +34,11 @@
     #24b7da
   );
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 800px) {
+  .Casting > div {
+    justify-content: center;
+  }
+}

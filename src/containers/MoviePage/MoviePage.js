@@ -9,7 +9,7 @@ import mvdbImage from "../../assets/img/mvdb.jpeg";
 // Components
 import Input from "../../components/Input/Input";
 import MovieDetails from "../../components/MovieDetails/MovieDetails";
-import Sypnosis from "../../components/Sypnosis/Sypnosis";
+import Synopsis from "../../components/Synopsis/Synopsis";
 import MovieVideos from "../../components/MovieVideos/MovieVideos";
 import Casting from "../../components/Casting/Casting";
 import SimilarMovies from "../../components/SimilarMovies/SimilarMovies";
@@ -94,7 +94,7 @@ const MoviePage = ({ handleSubmit, handleSearch, inputSearch }) => {
             crew={crew}
             cast={cast}
           />
-          <Sypnosis movie={movie} />
+          <Synopsis movie={movie} />
 
           {movie.videos ? (
             movie.videos.results ? (

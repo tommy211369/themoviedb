@@ -35,3 +35,11 @@
     #24b7da
   );
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 800px) {
+  .SimilarMovies > div {
+    justify-content: center;
+  }
+}
