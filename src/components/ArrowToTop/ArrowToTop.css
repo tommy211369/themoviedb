@@ -1,0 +1,12 @@
+.ArrowToTop {
+  color: #2ebbd1;
+  border: 1px solid #2ebbd1;
+  padding: 3px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.ArrowToTop:hover {
+  background-color: #2ebbd1;
+  border: 1px solid white;
+  color: white;
+}

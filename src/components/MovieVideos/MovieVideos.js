@@ -5,7 +5,7 @@ function MovieVideos({ movie, allVideos, setAllVideos }) {
   //VARIABLES
   const videoConfig = {
     height: "240",
-    width: "426",
+    width: "350",
   };
 
   let movieTrailers = [];

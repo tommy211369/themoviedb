@@ -12,6 +12,7 @@ import MoviePage from "../containers/MoviePage/MoviePage";
 import ActorPage from "../containers/ActorPage/ActorPage";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import ScrollToTop from "../components/ScrollToTop";
+import ArrowToTop from "../components/ArrowToTop/ArrowToTop";
 import Footer from "../components/Footer/Footer";
 
 function App() {
@@ -93,6 +94,7 @@ function App() {
           />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
+        <ArrowToTop />
       </BrowserRouter>
       <Footer />
     </div>

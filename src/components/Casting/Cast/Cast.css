@@ -53,3 +53,9 @@
     width: 80%;
   }
 }
+
+@media (max-width: 340px) {
+  .Cast {
+    width: 100%;
+  }
+}
