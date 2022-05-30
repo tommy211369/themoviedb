@@ -31,7 +31,7 @@ function MovieVideos({ movie, allVideos, setAllVideos }) {
 
   return (
     <div className="MovieVideos">
-      <h1>Videosss</h1>
+      <h1>Videos</h1>
       <div>
         {!allVideos
           ? shortTrailersArray.map((video) => {
