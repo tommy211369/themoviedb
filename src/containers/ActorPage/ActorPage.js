@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import "./ActorPage.css";
 import data from "../../assets/data";
 import axios from "axios";
+import Loading from "../../components/Loading/Loading";
 
 // Components
 import Input from "../../components/Input/Input";
@@ -17,8 +18,13 @@ function ActorPage({ handleSubmit, handleSearch, inputSearch }) {
   const [actor, setActor] = useState();
   const [movies, setMovies] = useState([]);
   const [allActorMovies, setAllActorMovies] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 800);
+
     fetchActor();
     fetchActorMovies();
   }, []);
@@ -50,8 +56,8 @@ function ActorPage({ handleSubmit, handleSearch, inputSearch }) {
 
   return (
     <div>
-      {!actor ? (
-        <div>Loading</div>
+      {loading ? (
+        <Loading />
       ) : (
         <div className="ActorPage">
           <Input

@@ -13,6 +13,7 @@ import Synopsis from "../../components/Synopsis/Synopsis";
 import MovieVideos from "../../components/MovieVideos/MovieVideos";
 import Casting from "../../components/Casting/Casting";
 import SimilarMovies from "../../components/SimilarMovies/SimilarMovies";
+import Loading from "../../components/Loading/Loading";
 
 const MoviePage = ({ handleSubmit, handleSearch, inputSearch }) => {
   const { id } = useParams();
@@ -25,9 +26,14 @@ const MoviePage = ({ handleSubmit, handleSearch, inputSearch }) => {
   const [allSimilarMovies, setAllSimilarMovies] = useState(false);
   const [allCast, setAllCast] = useState(false);
   const [allVideos, setAllVideos] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   // USEEFFECT
   useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 800);
+
     fetchMovie();
     fetchCast();
     fetchSimilarMovies();
@@ -76,10 +82,8 @@ const MoviePage = ({ handleSubmit, handleSearch, inputSearch }) => {
 
   return (
     <div>
-      {!movie ? (
-        <div>
-          <h1>Loading</h1>
-        </div>
+      {loading ? (
+        <Loading />
       ) : (
         <div className="MoviePage">
           <Input

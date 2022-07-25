@@ -47,7 +47,7 @@ function MovieVideos({ movie, allVideos, setAllVideos }) {
           : allMovieVideos.map((video) => {
               return (
                 <div key={video.id} className="video">
-                  <YouTube videoId={video.id} opts={videoConfig} />
+                  <YouTube videoId={video.key} opts={videoConfig} />
                   <h4>
                     {video.name} - {video.type}
                   </h4>

@@ -12,7 +12,6 @@ const Input = ({ handleSubmit, handleSearch, inputSearch }) => {
         onChange={handleSearch}
         value={inputSearch}
         className="Input"
-        autoFocus
       />
     </form>
   );
